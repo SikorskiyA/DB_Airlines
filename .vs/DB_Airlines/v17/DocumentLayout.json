@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Kursovaya\\DB_Airlines\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Kursovaya\\DB_Airlines\\Views\\index.hbs||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\index.hbs||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Kursovaya\\DB_Airlines\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Kursovaya\\DB_Airlines\\Views\\\u041D\u043E\u0432\u044B\u0439 \u0444\u0430\u0439\u043B||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\\u041D\u043E\u0432\u044B\u0439 \u0444\u0430\u0439\u043B||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Kursovaya\\DB_Airlines\\Views\\index.hbs||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\index.hbs||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Kursovaya\\DB_Airlines\\Public\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Public\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,40 +26,42 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\Kursovaya\\DB_Airlines\\Public\\css\\style.css",
+              "RelativeDocumentMoniker": "Public\\css\\style.css",
+              "ToolTip": "C:\\Kursovaya\\DB_Airlines\\Public\\css\\style.css",
+              "RelativeToolTip": "Public\\css\\style.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-20T18:50:57.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "app.js",
               "DocumentMoniker": "C:\\Kursovaya\\DB_Airlines\\app.js",
               "RelativeDocumentMoniker": "app.js",
               "ToolTip": "C:\\Kursovaya\\DB_Airlines\\app.js",
               "RelativeToolTip": "app.js",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAIwBcAAAASAAAA",
+              "ViewState": "AQIAABwAAAAAAAAAAAAgwCcAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2024-11-15T17:28:29.672Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "index.hbs",
-              "DocumentMoniker": "C:\\Kursovaya\\DB_Airlines\\Views\\index.hbs",
-              "RelativeDocumentMoniker": "Views\\index.hbs",
-              "ToolTip": "C:\\Kursovaya\\DB_Airlines\\Views\\index.hbs",
-              "RelativeToolTip": "Views\\index.hbs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAANAAAA",
+              "DocumentMoniker": "C:\\Kursovaya\\DB_Airlines\\views\\index.hbs",
+              "RelativeDocumentMoniker": "views\\index.hbs",
+              "ToolTip": "C:\\Kursovaya\\DB_Airlines\\views\\index.hbs",
+              "RelativeToolTip": "views\\index.hbs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-11-15T17:26:27.021Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "\u041D\u043E\u0432\u044B\u0439 \u0444\u0430\u0439\u043B",
-              "DocumentMoniker": "C:\\Kursovaya\\DB_Airlines\\Views\\\u041D\u043E\u0432\u044B\u0439 \u0444\u0430\u0439\u043B",
-              "RelativeDocumentMoniker": "Views\\\u041D\u043E\u0432\u044B\u0439 \u0444\u0430\u0439\u043B",
-              "ToolTip": "C:\\Kursovaya\\DB_Airlines\\Views\\\u041D\u043E\u0432\u044B\u0439 \u0444\u0430\u0439\u043B",
-              "RelativeToolTip": "Views\\\u041D\u043E\u0432\u044B\u0439 \u0444\u0430\u0439\u043B",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-10-09T10:48:49.66Z"
             }
           ]
         }

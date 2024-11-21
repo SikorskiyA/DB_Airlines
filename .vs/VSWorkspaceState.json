@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Public",
+    "\\Public\\css",
+    "\\Resources",
     "\\Views"
   ],
-  "SelectedNode": "\\Views\\index.hbs",
+  "SelectedNode": "\\app.js",
   "PreviewInSolutionExplorer": false
 }
