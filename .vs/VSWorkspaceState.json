@@ -2,6 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\controllers",
+    "\\public",
+    "\\public\\css",
     "\\routes",
     "\\views",
     "\\views\\clients",
@@ -9,6 +11,6 @@
     "\\views\\routes",
     "\\views\\sales"
   ],
-  "SelectedNode": "\\views\\sales\\Cart.hbs",
+  "SelectedNode": "\\public\\css",
   "PreviewInSolutionExplorer": false
 }

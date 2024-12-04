@@ -6,3 +6,7 @@ table, th, td {
     border: 1px solid black;
     border-collapse: collapse
 }
+.about{
+    color: red;
+    font-size: 2rem;
+}
