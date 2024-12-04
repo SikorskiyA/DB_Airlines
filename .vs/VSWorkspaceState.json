@@ -1,11 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Public",
-    "\\Public\\css",
-    "\\Resources",
-    "\\Views"
+    "\\controllers",
+    "\\routes",
+    "\\views",
+    "\\views\\clients",
+    "\\views\\home",
+    "\\views\\routes",
+    "\\views\\sales"
   ],
-  "SelectedNode": "\\app.js",
+  "SelectedNode": "\\views\\sales\\Cart.hbs",
   "PreviewInSolutionExplorer": false
 }

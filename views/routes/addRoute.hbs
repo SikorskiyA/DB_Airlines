@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ввод данных рейса</title>
+</head>
+
+<body>
+    <h1>Данные нового рейса</h1>
+    <form action="/routes/postAddRoute" method="POST">
+        <label for="STRcity-select">Откуда</label><br />
+        <select name="STRcity" id="STRcity-select">
+            <option value="0">Выберите город</option>
+            {{#each Cities}}
+            <option value="{{this.city}}">{{this.rusName}}</option>
+            {{/each}}
+        </select> <br />
+
+        <label>Дата отбытия (YYYY-MM-DD hh:mm:ss)</label><br>
+        <input type="datetime" name="STRtime" /><br>
+
+        <label for="ARRcity-select">Куда</label><br />
+        <select name="ARRcity" id="ARRcity-select">
+            <option value="0">Выберите город</option>
+            {{#each Cities}}
+            <option value="{{this.city}}">{{this.rusName}}</option>
+            {{/each}}
+        </select> <br />
+
+        <label>Дата прибытия (YYYY-MM-DD hh:mm:ss)</label><br>
+        <input type="datetime" name="ARRtime" /><br>
+
+        <label>Цена</label><br>
+        <input name="price" type="number" /><br>
+
+        <label>Количество мест</label><br>
+        <input name="seats" type="number" /> <br>
+
+
+        <input type="submit" value="Отправить" />
+    </form>
+
+    <a href="/">Назад</a>
+</body>
+</html>
+

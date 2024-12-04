@@ -1,0 +1,35 @@
+﻿<h2>История покупок</h2>
+
+
+
+{{#if Tickets.length}}
+<table border="1">
+    <tr>
+        <th>Откуда</th>
+        <th>Время отбытия</th>
+        <th>Куда</th>
+        <th>Время прибытия</th>
+        <th>Номер клиента</th>
+        <th>Номер рейса</th>
+        <th>Дата сделки</th>
+    </tr>
+    {{#each Tickets}}
+<tr>
+    <td>{{this.STRcity}}</td>
+    <td>{{this.STRtime}}</td>
+    <td>{{this.ARRcity}}</td>
+    <td>{{this.ARRtime}}</td>
+    <td>{{this.clientId}}</td>
+    <td>{{this.routeId}}</td>
+    <td>{{this.purchaseDate}}</td>
+</tr>
+    {{/each}}
+</table>
+{{else}}
+<p>История покупок пуста.</p>
+{{/if}}
+
+<br />
+
+<a href="/">Назад</a>
+<br />

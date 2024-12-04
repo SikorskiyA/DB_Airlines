@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Редактирование данных рейса</title>
+    <style>
+        .field {
+            width: 180px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Редактирование данных рейса</h2>
+    <form action="/routes/postEditRoute" method="POST">
+        <input name="RouteId" value="{{routeId}}" hidden /><br />
+
+        <label>Откуда</label><br>
+        <input value="{{route.STRcity}}" disabled /><br>
+        <select name="STRcity" id="STRcity-select">
+            <option value="0">Выберите город</option>
+            {{#each Cities}}
+            <option value="{{this.city}}">{{this.rusName}}</option>
+            {{/each}}
+        </select> <br /><br>
+
+        <label>Дата отбытия (YYYY-MM-DD hh:mm:ss)</label><br>
+        <input value="{{route.STRtime}}" disabled /><br>
+        <input name="STRtime" type="datetime" /><br><br>
+
+        <label>Куда</label><br>
+        <input value="{{route.ARRcity}}" disabled /><br>
+        <select name="ARRcity" id="ARRcity-select">
+            <option value="0">Выберите город</option>
+            {{#each Cities}}
+            <option value="{{this.city}}">{{this.rusName}}</option>
+            {{/each}}
+        </select> <br /><br>
+
+        <label>Дата прибытия (YYYY-MM-DD hh:mm:ss)</label><br>
+        <input value="{{route.ARRtime}}" disabled /><br>
+        <input name="ARRtime" type="datetime" /> <br><br>
+
+        <label>Цена</label><br>
+        <input type="number" value="{{route.price}}" disabled /><br>
+        <input name="price" type="number" /> <br><br>
+
+        <label>Количество мест</label><br>
+        <input type="number" value="{{route.seats}}" disabled /><br><br>
+        <input name="seats" type="number" /><br><br>
+
+        <input type="submit" value="Отправить" />
+    </form>
+
+        <a href="/routes">Поиск рейсов</a>
+</body>
+</html>
+
+

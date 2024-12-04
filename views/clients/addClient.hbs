@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ввод данных нового Клиента</title>
+    <style>
+        .field {
+            width: 180px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Данные нового Клиента</h1>
+    <form action="/clients/postAddClient" method="POST">
+        <label>ClientId</label><br>
+        <input name="clientId" type="number" /> <br>
+
+        <label>Имя</label><br>
+        <input name="clientName" /><br>
+
+        <label>Почта</label><br>
+        <input name="email" /><br>
+
+        <label>Телефон</label><br>
+        <input name="phone" /> <br>
+
+
+        <input type="submit" value="Отправить" />
+    </form>
+
+    <a href="/">Назад</a>
+</body>
+</html>
+

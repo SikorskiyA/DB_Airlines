@@ -3,16 +3,32 @@
   "WorkspaceRootPath": "C:\\Kursovaya\\DB_Airlines\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Kursovaya\\DB_Airlines\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Kursovaya\\DB_Airlines\\views\\sales\\Cart.hbs||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:views\\sales\\Cart.hbs||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Kursovaya\\DB_Airlines\\Views\\index.hbs||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\index.hbs||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Kursovaya\\DB_Airlines\\controllers\\routeController.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:controllers\\routeController.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Kursovaya\\DB_Airlines\\Public\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Public\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Kursovaya\\DB_Airlines\\controllers\\saleController.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:controllers\\saleController.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Kursovaya\\DB_Airlines\\views\\sales\\History.hbs||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:views\\sales\\History.hbs||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Kursovaya\\DB_Airlines\\routes\\saleRouter.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:routes\\saleRouter.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Kursovaya\\DB_Airlines\\views\\routes\\Routes.hbs||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:views\\routes\\Routes.hbs||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Kursovaya\\DB_Airlines\\views\\routes\\Search.hbs||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:views\\routes\\Search.hbs||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +38,97 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "style.css",
-              "DocumentMoniker": "C:\\Kursovaya\\DB_Airlines\\Public\\css\\style.css",
-              "RelativeDocumentMoniker": "Public\\css\\style.css",
-              "ToolTip": "C:\\Kursovaya\\DB_Airlines\\Public\\css\\style.css",
-              "RelativeToolTip": "Public\\css\\style.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-20T18:50:57.353Z",
+              "DocumentIndex": 1,
+              "Title": "routeController.js",
+              "DocumentMoniker": "C:\\Kursovaya\\DB_Airlines\\controllers\\routeController.js",
+              "RelativeDocumentMoniker": "controllers\\routeController.js",
+              "ToolTip": "C:\\Kursovaya\\DB_Airlines\\controllers\\routeController.js",
+              "RelativeToolTip": "controllers\\routeController.js",
+              "ViewState": "AQIAAIoAAAAAAAAAAAAkwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-04T14:54:19.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "saleRouter.js",
+              "DocumentMoniker": "C:\\Kursovaya\\DB_Airlines\\routes\\saleRouter.js",
+              "RelativeDocumentMoniker": "routes\\saleRouter.js",
+              "ToolTip": "C:\\Kursovaya\\DB_Airlines\\routes\\saleRouter.js",
+              "RelativeToolTip": "routes\\saleRouter.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-04T14:20:58.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "History.hbs",
+              "DocumentMoniker": "C:\\Kursovaya\\DB_Airlines\\views\\sales\\History.hbs",
+              "RelativeDocumentMoniker": "views\\sales\\History.hbs",
+              "ToolTip": "C:\\Kursovaya\\DB_Airlines\\views\\sales\\History.hbs",
+              "RelativeToolTip": "views\\sales\\History.hbs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAABcAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-04T14:19:04.396Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "app.js",
-              "DocumentMoniker": "C:\\Kursovaya\\DB_Airlines\\app.js",
-              "RelativeDocumentMoniker": "app.js",
-              "ToolTip": "C:\\Kursovaya\\DB_Airlines\\app.js",
-              "RelativeToolTip": "app.js",
-              "ViewState": "AQIAABwAAAAAAAAAAAAgwCcAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-15T17:28:29.672Z",
+              "Title": "Cart.hbs",
+              "DocumentMoniker": "C:\\Kursovaya\\DB_Airlines\\views\\sales\\Cart.hbs",
+              "RelativeDocumentMoniker": "views\\sales\\Cart.hbs",
+              "ToolTip": "C:\\Kursovaya\\DB_Airlines\\views\\sales\\Cart.hbs",
+              "RelativeToolTip": "views\\sales\\Cart.hbs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAADQAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-04T13:45:24.051Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "index.hbs",
-              "DocumentMoniker": "C:\\Kursovaya\\DB_Airlines\\views\\index.hbs",
-              "RelativeDocumentMoniker": "views\\index.hbs",
-              "ToolTip": "C:\\Kursovaya\\DB_Airlines\\views\\index.hbs",
-              "RelativeToolTip": "views\\index.hbs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAhAAAA",
+              "DocumentIndex": 2,
+              "Title": "saleController.js",
+              "DocumentMoniker": "C:\\Kursovaya\\DB_Airlines\\controllers\\saleController.js",
+              "RelativeDocumentMoniker": "controllers\\saleController.js",
+              "ToolTip": "C:\\Kursovaya\\DB_Airlines\\controllers\\saleController.js",
+              "RelativeToolTip": "controllers\\saleController.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-04T13:07:18.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Search.hbs",
+              "DocumentMoniker": "C:\\Kursovaya\\DB_Airlines\\views\\routes\\Search.hbs",
+              "RelativeDocumentMoniker": "views\\routes\\Search.hbs",
+              "ToolTip": "C:\\Kursovaya\\DB_Airlines\\views\\routes\\Search.hbs",
+              "RelativeToolTip": "views\\routes\\Search.hbs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAACIAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-11-15T17:26:27.021Z",
+              "WhenOpened": "2024-12-03T15:29:09.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Routes.hbs",
+              "DocumentMoniker": "C:\\Kursovaya\\DB_Airlines\\views\\routes\\Routes.hbs",
+              "RelativeDocumentMoniker": "views\\routes\\Routes.hbs",
+              "ToolTip": "C:\\Kursovaya\\DB_Airlines\\views\\routes\\Routes.hbs",
+              "RelativeToolTip": "views\\routes\\Routes.hbs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAACkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-02T17:13:13.995Z",
               "EditorCaption": ""
             }
           ]

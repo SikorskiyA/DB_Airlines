@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <title> Покупка авиабилетов  </title>
+</head>
+
+<body>
+    <p><a href="/routes/addRoute">Новый рейс</a></p>
+
+    <form action="/routes/search" method="POST">
+
+        <label for="STRcity-select">Откуда</label><br />
+        <select name="STRcity" id="STRcity-select">
+            <option value="0">Выберите город</option>
+            {{#each Cities}}
+            <option value="{{this.city}}">{{this.rusName}}</option>
+            {{/each}}
+        </select> <br />
+
+        <label for="ARRcity-select">Куда</label><br />
+        <select name="ARRcity" id="ARRcity-select">
+            <option value="0">Выберите город</option>
+            {{#each Cities}}
+            <option value="{{this.city}}">{{this.rusName}}</option>
+            {{/each}}
+        </select> <br />
+
+        <label for="STRtime-select">Когда</label> <br />
+        <input name="STRtime" id="STRtime" type="date" /> <br />
+        <button type="submit">Поиск</button>
+
+    </form>
+
+    <a href="/">Назад</a>
+
+    <br />
+    Количество товаров в Корзине: {{cartLen}}
+    <br />
+
+    <a href="/sales/getCart">Оформление продажи</a> <br />
+    <a href="/clients">К списку клиентов</a>
+
+    <!--
+
+
+    <script>
+        //=======================================================
+        // Выбранный ТИП УСТРОЙСТВА
+        //=======================================================
+        const devSelect = document.getElementById("dev-select");
+        // Тег отображения номера выбранного типа устройства
+        const lblDev = document.getElementById("curDev");
+        // Установка текущего типа устройства
+        devSelect.selectedIndex = lblDev.innerText;
+
+        //=======================================================
+        // Выбранный ПРОИЗВОДИТЕЛЬ
+        //=======================================================
+        const firmSelect = document.getElementById("firm-select");
+        // Тег отображения номера выбранного производителя
+        const lblFirm = document.getElementById("curFirm");
+        // Установка текущего производителя
+        firmSelect.selectedIndex = lblFirm.innerText;
+    </script>-->
+</body>
+</html>
+

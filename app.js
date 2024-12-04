@@ -1,51 +1,28 @@
-const mysql = require("mysql2");
 const express = require("express");
-
 const app = express();
-const urlencodedParser = express.urlencoded({ extended: false });
-app.use(express.static(__dirname + '/public'));
 
-const pool = mysql.createPool({
-
-    connectionLimit: 5,
-    host: "localhost",
-    user: "root",
-    database: "dbairlines",
-    password: "1234"
-
-});
 
 app.set("view engine", "hbs");
+const urlencodedParser = express.urlencoded({ extended: false });
 
-app.get("/", function (req, res) {
-    pool.query("SELECT * FROM routes", function (err, data) {
 
-        if (err) return console.log(err);
-        res.render("index.hbs", {
-            route: data
+const homeRouter = require("./routes/homeRouter.js");
+const routeRouter = require("./routes/routeRouter.js");
+const clientRouter = require("./routes/clientRouter.js");
 
-        });
-    });
+const saleRouter = require("./routes/saleRouter.js");
+
+app.use("/routes", urlencodedParser, routeRouter);
+app.use("/clients", urlencodedParser, clientRouter);
+
+app.use("/sales", urlencodedParser, saleRouter);
+
+app.use("/", homeRouter);
+
+
+app.use(function (req, res, next) {
+    res.status(404).send("Not Found")
 });
 
-app.get("/sort", function (req, res) {
-
-    const start = req.query.start;
-    const arrival = req.query.arrival;
-    const date = req.query.date;
-
-    pool.query("select * from routes where STRcity like ? and ARRcity like ? and STRtime like ?",
-        [start, arrival, "%" + date + "%"], function (err, data) {
-
-        if (err) return console.log(err);
-        res.render("index.hbs", {
-            route: data
-
-        });
-    });
-});
-
-//------------------------------------------------
-app.listen(3000, function () {
-    console.log("Server is ready to Connect...");
-});
+console.log("Server is ready to Connect...!")
+app.listen(3000);
