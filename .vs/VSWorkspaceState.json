@@ -11,6 +11,6 @@
     "\\views\\routes",
     "\\views\\sales"
   ],
-  "SelectedNode": "\\public\\css\\style.css",
+  "SelectedNode": "\\views\\routes\\Routes.hbs",
   "PreviewInSolutionExplorer": false
 }

@@ -17,7 +17,15 @@ exports.getRoutes = function (req, res) {
 exports.search = function (req, res) {
     const STRcity = req.body.STRcity;
     const ARRcity = req.body.ARRcity;
-    const STRtime = "%" + req.body.STRtime + "%";
+    let STRtime = req.body.STRtime;
+
+    if (STRcity == 0 || ARRcity == 0 || STRtime == 0 || STRcity == undefined ||
+        ARRcity == undefined || STRtime == undefined) {
+        res.redirect("/routes");
+        return;
+    }
+
+    STRtime = '%' + STRtime + '%';
 
     pool.query("SELECT * FROM ROUTES WHERE STRcity LIKE ? AND ARRcity like ? AND STRtime like ? AND seats!=0",
         [STRcity, ARRcity, STRtime], function (err, data) {

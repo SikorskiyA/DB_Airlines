@@ -34,8 +34,6 @@ exports.postAddClient = function (req, res) {
         [ClientId, ClientName, Email, Phone], function (err, client) {
             if (err) return console.log(err);
 
-            console.log(client);
-
             res.redirect("/clients");
         });
 };

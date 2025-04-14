@@ -7,7 +7,7 @@
 </head>
 
 <body>
-
+    {{#if Routes.length}}
     <h1> Найденные рейсы </h1>
 
     <table border="1">
@@ -22,22 +22,26 @@
         </tr>
 
         {{#each Routes}}
-    <tr>
-        <td>{{this.STRcity}}</td>
-        <td>{{this.STRtime}}</td>
-        <td>{{this.ARRcity}}</td>
-        <td>{{this.ARRtime}}</td>
-        <td>{{this.price}}</td>
-        <td>{{this.routeid}}</td>
+        <tr>
+            <td>{{this.STRcity}}</td>
+            <td>{{this.STRtime}}</td>
+            <td>{{this.ARRcity}}</td>
+            <td>{{this.ARRtime}}</td>
+            <td>{{this.price}}</td>
+            <td>{{this.routeid}}</td>
 
-        <td> <a href="/routes/editRoute/{{this.routeid}}">Редактировать</a> </td>
-        <td> <a href="/routes/deleteRoute/{{this.routeid}}">Удалить</a> </td>
-        <td> <a href="/sales/addToCart/{{this.routeid}}">Купить</a> </td>
-    </tr>
+            <td> <a href="/routes/editRoute/{{this.routeid}}">Редактировать</a> </td>
+            <td> <a href="/routes/deleteRoute/{{this.routeid}}">Удалить</a> </td>
+            <td> <a href="/sales/addToCart/{{this.routeid}}">Купить</a> </td>
+        </tr>
         {{/each}}
 
     </table>
     <br />
+
+    {{else}}
+    <p>Мы не смогли найти рейсы с таким маршрутом.</p>
+    {{/if}}
 
     <a href="/routes">Назад</a>
 

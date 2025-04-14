@@ -32,6 +32,10 @@ exports.getCart = function (req, res) {
 
 exports.cartToHistory = function (req, res) {
     const clientId = req.body.clientId;
+    if (clientId == 0 || clientId == undefined) {
+        res.redirect("../sales/getCart");
+        return;
+    }
     var date = new Date().getFullYear() + '-' + new Date().getMonth() + '-' + new Date().getDate()
         + ' ' + new Date().getHours() + ':' + new Date().getMinutes();
 
