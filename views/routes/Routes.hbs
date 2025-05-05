@@ -1,44 +1,75 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="ru">
 <head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="/css/style.css">
     <title> Покупка авиабилетов  </title>
 </head>
 
 <body>
-    <p><a href="/routes/addRoute">Новый рейс</a></p>
+    <div class="body-content">
+    <!-- Шапка с кнопками -->
+    <div class="header-buttons">
+        <a href="/" class="header-button">Главная страница</a>
+        <a href="/routes/addRoute" class="header-button">Создать рейс</a>
+        
+        <a href="/sales/getCart" class="header-button">Оформить заказ</a>
+        <a href="/clients" class="header-button">Список клиентов</a>
+    </div>
 
     <form action="/routes/search" method="POST">
+        <div class="search-container" style="background-image: url('/svg/airplane.jpg'); width:100%;">
+            
+            <div class="search-field">
+                
+                <select name="STRcity" id="STRcity-select" >
+                    <option value="0">Откуда</option>
+                    {{#each Cities}}
+                    <option value="{{this.city}}">{{this.rusName}}</option>
+                    {{/each}}
+                </select>
+            </div>
 
-        <label for="STRcity-select">Откуда</label><br />
-        <select name="STRcity" id="STRcity-select">
-            <option value="0">Выберите город</option>
-            {{#each Cities}}
-            <option value="{{this.city}}">{{this.rusName}}</option>
-            {{/each}}
-        </select> <br />
+            <div class="search-field">
+                
+                <select name="ARRcity" id="ARRcity-select">
+                    <option value="0">Куда</option>
+                    {{#each Cities}}
+                    <option value="{{this.city}}">{{this.rusName}}</option>
+                    {{/each}}
+                </select>
+            </div>
 
-        <label for="ARRcity-select">Куда</label><br />
-        <select name="ARRcity" id="ARRcity-select">
-            <option value="0">Выберите город</option>
-            {{#each Cities}}
-            <option value="{{this.city}}">{{this.rusName}}</option>
-            {{/each}}
-        </select> <br />
+            <div class="search-field">
+                
+                <input name="STRtime" id="STRtime" type="date" />
+            </div>
 
-        <label for="STRtime-select">Когда</label> <br />
-        <input name="STRtime" id="STRtime" type="date" /> <br />
-        <button type="submit">Поиск</button>
+            <div class="search-field">
+                
+                <button type="submit">Поиск</button>
+            </div>
 
+
+
+        </div>
     </form>
 
-    <a href="/">Назад</a>
-
-    <br />
+   
+    <div class="count-basket" style="margin-top:10px;" >
     Количество товаров в Корзине: {{cartLen}}
-    <br />
-
-    <a href="/sales/getCart">Оформление продажи</a> <br />
-    <a href="/clients">К списку клиентов</a>
+    
+    </div>
+</div>
 </body>
-</html>
 
+<footer class="footer">
+    <p>&copy; 2025 Авиасервис. Все права защищены. (кроме женских) </p>
+</footer>
+
+</html>

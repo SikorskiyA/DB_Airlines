@@ -1,47 +1,63 @@
-﻿<html>
+﻿<!DOCTYPE html>
+<html lang="ru">
 
 <head>
 
-    <title>История покупок</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
 
+
+    <link rel="stylesheet" href="/css/style.css">
+    <title> История покупок </title>
 </head>
 
 <body>
+    <div class="body-content">
+        <div class="header-buttons">
+            <a href="/" class="header-button">Главная страница</a>
+        </div>
 
-    <h2>История покупок</h2>
-    {{#if Tickets.length}}
-    <table border="1">
-        <tr>
-            <th>Откуда</th>
-            <th>Время отбытия</th>
-            <th>Куда</th>
-            <th>Время прибытия</th>
-            <th>Номер клиента</th>
-            <th>Номер рейса</th>
-            <th>Дата сделки</th>
-        </tr>
-        {{#each Tickets}}
-        <tr>
-            <td>{{this.STRcity}}</td>
-            <td>{{this.STRtime}}</td>
-            <td>{{this.ARRcity}}</td>
-            <td>{{this.ARRtime}}</td>
-            <td>{{this.clientId}}</td>
-            <td>{{this.routeId}}</td>
-            <td>{{this.purchaseDate}}</td>
-        </tr>
-        {{/each}}
-    </table>
-    {{else}}
-    <p>История покупок пуста.</p>
-    {{/if}}
+        <div class="clients-list">
+            <a>История покупок </a>
+        </div>
 
-    <br />
+        {{#if Tickets.length}}
+        <table class="history-table">
+            <thead>
+                <tr>
+                    <th>Откуда</th>
+                    <th>Время отбытия</th>
+                    <th>Куда</th>
+                    <th>Время прибытия</th>
+                    <th>Номер клиента</th>
+                    <th>Номер рейса</th>
+                    <th>Дата сделки</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each Tickets}}
+                <tr>
+                    <td>{{this.STRcity}}</td>
+                    <td>{{this.STRtime}}</td>
+                    <td>{{this.ARRcity}}</td>
+                    <td>{{this.ARRtime}}</td>
+                    <td>{{this.clientId}}</td>
+                    <td>{{this.routeId}}</td>
+                    <td>{{this.purchaseDate}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        {{else}}
+        <p>История покупок пуста.</p>
+        {{/if}}
 
-    <a href="/">Назад</a>
-    <br />
-
+    </div>
 </body>
 
-</html>
+<footer class="footer">
+    <p>&copy; 2025 Авиасервис. Все права защищены. (кроме женских) </p>
+</footer>
 
+</html>

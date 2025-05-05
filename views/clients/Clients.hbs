@@ -1,39 +1,61 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-    <title>Список клиентов авиакомпании</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <title> Список клиентов  </title>
 </head>
-
 <body>
-    <p><a href="/clients/addClient">Новый клиент</a></p>
-    <h1> Список клиентов</h1>
+ <div class="body-content">
+        <!-- Шапка с кнопками -->
+    <div class="header-buttons">
+         <a href="/" class="header-button" >Главная страница</a>
+        <a href="/clients/addClient" class="header-button">Добавить клиента</a>
+       
+    </div>
+   
+    <div class="clients-list">
+  <a>Список клиентов</a>
+</div>
 
-    <table border="1">
+
+<table class="styled-table">
+    <thead>
         <tr>
             <th>ClientId</th>
             <th>Имя</th>
             <th>Почта</th>
             <th>Телефон</th>
             <th></th>
+            <th></th>
         </tr>
-
+    </thead>
+    <tbody>
         {{#each Clients}}
         <tr>
             <td>{{this.clientId}}</td>
             <td>{{this.clientName}}</td>
             <td>{{this.email}}</td>
             <td>{{this.phone}}</td>
-
-            <td> <a href="/clients/editClient/{{this.clientId}}">Редактировать</a> </td>
-            <td> <a href="/sales/getHistory/{{this.clientId}}">История</a></td>
+            <td><a href="/clients/editClient/{{this.clientId}}">Редактировать</a></td>
+            <td><a href="/sales/getHistory/{{this.clientId}}">История</a></td>
         </tr>
         {{/each}}
-
-    </table>
-    <br />
-
-    <a href="/">Назад</a>
+    </tbody>
+</table>
+    
+</div>
+ 
 
 </body>
+<footer class="footer">
+    <p>&copy; 2025 Авиасервис. Все права защищены. (кроме женских) </p>
+</footer>
+
 </html>
 

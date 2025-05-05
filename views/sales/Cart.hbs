@@ -1,56 +1,78 @@
-﻿<html>
+﻿<!DOCTYPE html>
+<html lang="ru">
+
 <head>
-    <title>Корзина</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="/css/style.css">
+    <title> Корзина </title>
 </head>
 
 <body>
-    <h1>Оформление заказа</h1>
+    <div class="body-content">
 
-    <h2>Корзина</h2>
+        <div class="header-buttons">
+            <a href="/" class="header-button">Главная страница</a>
+        </div>
 
-    {{#if cartTickets.length}}
-    <table border="1">
-        <tr>
-            <th>Откуда</th>
-            <th>Время отбытия</th>
-            <th>Куда</th>
-            <th>Время прибытия</th>
-            <th>Цена</th>
-        </tr>
 
-        {{#each cartTickets}}
-        <tr>
-            <td>{{this.STRcity}}</td>
-            <td>{{this.STRtime}}</td>
-            <td>{{this.ARRcity}}</td>
-            <td>{{this.ARRtime}}</td>
-            <td>{{this.price}}</td>
-            {{/each}}
-    </table>
-    <label>
-        Всего на {{totalPrice}} рублей
-    </label>
-    <br />
+        <div class="clients-list">
+            <a>Оформление заказа </a>
+        </div>
+        <div class="container">
+            {{#if cartTickets.length}}
+            <table>
+                <tr>
+                    <th>Откуда</th>
+                    <th>Время отбытия</th>
+                    <th>Куда</th>
+                    <th>Время прибытия</th>
+                    <th>Цена</th>
+                </tr>
+                {{#each cartTickets}}
+                <tr>
+                    <td>{{this.STRcity}}</td>
+                    <td>{{this.STRtime}}</td>
+                    <td>{{this.ARRcity}}</td>
+                    <td>{{this.ARRtime}}</td>
+                    <td>{{this.price}}</td>
+                </tr>
+                {{/each}}
+            </table>
 
-    --------------------------------------------------------
-    <br />
-    <br />
+            <label>
+                ВСЕГО: {{totalPrice}} рублей
+            </label>
+            <br />
 
-    <form action="/sales/cartToHistory" method="POST">
-        <select name="clientId" id="clientId">
-            <option value="0">Выберите Клиента:</option>
-            {{#each Clients}}
-            <option value="{{this.clientId}}">  {{this.clientName}}</option>
-            {{/each}}
-        </select>
+            <form action="/sales/cartToHistory" method="POST">
+                <select name="clientId" id="clientId">
+                    <option value="0">Выберите Клиента</option>
+                    {{#each Clients}}
+                    <option value="{{this.clientId}}">{{this.clientName}}</option>
+                    {{/each}}
+                </select>
 
-        <button type="submit"> Оплатить заказ </button>
-    </form>
+                <button type="submit">Оплатить заказ</button>
+            </form>
+            {{else}}
+            <p style="font-size:24px; color:white;">Ваша корзина пуста.</p>
+            {{/if}}
+        </div>
 
-    {{else}}
-    <p>Ваша корзина пуста.</p>
-    {{/if}}
-    <a href="/routes"> Назад </a>
+    </div>
 
 </body>
+
+
+<footer class="footer">
+    <p>&copy; 2025 Авиасервис. Все права защищены. (кроме женских) </p>
+</footer>
+
+
+
 </html>

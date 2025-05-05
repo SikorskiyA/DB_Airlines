@@ -1,50 +1,72 @@
-<html>
+<!DOCTYPE html>
+<html lang="ru">
 
 <head>
 
-    <title>Поиск билетов</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
 
+
+    <link rel="stylesheet" href="/css/style.css">
+    <title> Поиск рейсов </title>
 </head>
 
 <body>
-    {{#if Routes.length}}
-    <h1> Найденные рейсы </h1>
 
-    <table border="1">
-        <tr>
-            <th>Откуда</th>
-            <th>Отбытие</th>
-            <th>Куда</th>
-            <th>Прибытие</th>
-            <th>Цена</th>
-            <th>Id</th>
-            <th></th>
-        </tr>
+    <div class="body-content">
 
-        {{#each Routes}}
-        <tr>
-            <td>{{this.STRcity}}</td>
-            <td>{{this.STRtime}}</td>
-            <td>{{this.ARRcity}}</td>
-            <td>{{this.ARRtime}}</td>
-            <td>{{this.price}}</td>
-            <td>{{this.routeid}}</td>
+        <div class="header-buttons">
+            <a href="/" class="header-button">Главная страница</a>
 
-            <td> <a href="/routes/editRoute/{{this.routeid}}">Редактировать</a> </td>
-            <td> <a href="/routes/deleteRoute/{{this.routeid}}">Удалить</a> </td>
-            <td> <a href="/sales/addToCart/{{this.routeid}}">Купить</a> </td>
-        </tr>
-        {{/each}}
+        </div>
 
-    </table>
-    <br />
+        {{#if Routes.length}}
+        <div class="clients-list">
+            <a>Найденные рейсы </a>
+        </div>
 
-    {{else}}
-    <p>Мы не смогли найти рейсы с таким маршрутом.</p>
-    {{/if}}
 
-    <a href="/routes">Назад</a>
 
+        <table border="1">
+            <tr>
+                <th>Откуда</th>
+                <th>Отбытие</th>
+                <th>Куда</th>
+                <th>Прибытие</th>
+                <th>Цена</th>
+                <th>Id</th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+
+            {{#each Routes}}
+            <tr>
+                <td>{{this.STRcity}}</td>
+                <td>{{this.STRtime}}</td>
+                <td>{{this.ARRcity}}</td>
+                <td>{{this.ARRtime}}</td>
+                <td>{{this.price}}</td>
+                <td>{{this.routeid}}</td>
+
+                <td> <a href="/routes/editRoute/{{this.routeid}}">Редактировать</a> </td>
+                <td> <a href="/routes/deleteRoute/{{this.routeid}}">Удалить</a> </td>
+                <td> <a href="/sales/addToCart/{{this.routeid}}">Купить</a> </td>
+            </tr>
+            {{/each}}
+
+        </table>
+        <br />
+
+        {{else}}
+        <p>Мы не смогли найти рейсы с таким маршрутом.</p>
+        {{/if}}
+
+    </div>
 </body>
+<footer class="footer">
+    <p>&copy; 2025 Авиасервис. Все права защищены. (кроме женских) </p>
+</footer>
 
 </html>

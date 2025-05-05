@@ -1,35 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 
 <head>
-    <title>Ввод данных нового Клиента</title>
-    <style>
-        .field {
-            width: 180px;
-        }
-    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="/css/style.css">
+    <title> Добавить клиента </title>
 </head>
 
 <body>
-    <h1>Данные нового Клиента</h1>
-    <form action="/clients/postAddClient" method="POST">
-        <label>ClientId</label><br>
-        <input name="clientId" type="number" /> <br>
-
-        <label>Имя</label><br>
-        <input name="clientName" /><br>
-
-        <label>Почта</label><br>
-        <input name="email" /><br>
-
-        <label>Телефон</label><br>
-        <input name="phone" /> <br>
+    <div class="body-content">
+        <div class="header-buttons">
+            <a href="/" class="header-button">Главная страница</a>
+        </div>
 
 
-        <input type="submit" value="Отправить" />
-    </form>
+        <div class="clients-list">
+            <a>Данные нового клиента</a>
+        </div>
 
-    <a href="/">Назад</a>
+        <form action="/clients/postAddClient" method="POST" class="client-form">
+            <label for="clientId"
+                style="font-family: 'Poiret One';font-size:18px; font-weight:bold;">ClientId</label><br>
+            <input name="clientId" type="number" id="clientId" /><br>
+
+            <label for="clientName" style="font-family: 'Poiret One';font-size:18px; font-weight:bold;">Имя</label><br>
+            <input name="clientName" id="clientName" /><br>
+
+            <label for="email" style="font-family: 'Poiret One';font-size:18px; font-weight:bold;">Почта</label><br>
+            <input name="email" id="email" type="email" /><br>
+
+            <label for="phone" style="font-family: 'Poiret One';font-size:18px; font-weight:bold;">Телефон</label><br>
+            <input name="phone" id="phone" type="tel" /><br>
+
+            <input type="submit" value="Отправить" class="submit-btn"
+                style="font-family: 'Poiret One';font-size:18px; font-weight:bold;" />
+        </form>
+
+    </div>
+
 </body>
-</html>
 
+<footer class="footer">
+    <p>&copy; 2025 Авиасервис. Все права защищены. (кроме женских) </p>
+</footer>
+
+</html>

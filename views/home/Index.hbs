@@ -1,21 +1,43 @@
-﻿<html>
+﻿<!DOCTYPE html>
+<html lang="ru">
 
 <head>
 
-    <title>Авиабилеты</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
 
+
+    <title>Авиабилеты</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
+    <div class="body-content">
+        <div class="header">
+            Начни свое путешествие сейчас
+        </div>
 
-    <h2>Добро пожаловать в наш сервис бронирования авиабилетов!</h2>
-    <ul>
-        <li><a href="/routes">Поиск авиабилетов</a></li>
 
-        <li><a href="/clients">Клиенты</a></li>
-        <li><a href="/about">О нашем сервисе</a></li>
-    </ul>
+        <div class="categories">
+            <div class="category" style="background-image: url('/svg/clients.jpg');">
+                <a href="/clients">Наши клиенты</a>
+            </div>
+
+            <div class="category" style="background-image: url('/svg/avia-search.jpg');">
+                <a href="/routes">Поиск авиабилетов</a>
+            </div>
+
+            <div class="category" style="background-image: url('/svg/about.webp');">
+                <a href="/about">О сервисе</a>
+            </div>
+        </div>
+    </div>
 
 </body>
+
+<footer class="footer">
+    <p>&copy; 2025 Авиасервис. Все права защищены. (кроме женских) </p>
+</footer>
 
 </html>

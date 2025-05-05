@@ -1,0 +1,655 @@
+.poiret-one-regular {
+    font-family: "Poiret One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+body{
+margin:0px;
+    font-family: 'Poiret One';
+    background-color:#082567 ;
+     overflow-x: hidden; /* отключает горизонтальный скролл */
+}
+
+
+.header {
+    background-image: url("/svg/header-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+
+    color: white; /* Чтобы текст был виден на фоне */
+    padding: 200px 20px; /* Добавим отступы для красоты */
+    font-family: 'Poiret One', sans-serif;
+
+    z-index: 100000;
+}
+
+.categories {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px 20px;
+}
+.category {
+    flex: 1;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.category a {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: 'Poiret One', sans-serif;
+}
+.category:hover {
+    transform: scale(1.02);
+}
+
+/*покупка билетов*/
+
+
+
+/* Стили для блока с кнопками */
+.header-buttons {
+    
+    display: flex;
+    justify-content: center;  /* Центрируем кнопки */
+    gap: 20px; /* Расстояние между кнопками */
+    padding: 20px 0;  /* Отступы сверху и снизу */
+    background-color: none; /* Темный фон для шапки */
+    position: sticky;
+    top: 0; /* Закрепляем шапку сверху страницы */
+    z-index: 1000; /* Чтобы шапка была поверх других элементов */
+}
+
+/* Стили для кнопок */
+.header-button {
+    text-decoration: none;  /* Убираем подчеркивание */
+    color: white;  /* Цвет текста */
+    background-color: #0066cc; /* Цвет фона кнопки */
+    padding: 10px 20px;
+    border-radius: 5px; /* Скругляем углы */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.header-button:hover {
+    background-color: #004a99; /* Цвет кнопки при наведении */
+}
+
+.header-button:active {
+    background-color: #003366; /* Цвет кнопки при нажатии */
+}
+
+
+
+/* Стиль для поиска */
+.search-container {
+    margin-top: 100px;
+    color: white;  /* Цвет текста */
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали */
+    justify-content: center;  /* Центрируем кнопки */
+    gap:10px;
+    padding: 80px;
+    flex: 1;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    
+}
+
+.search-field {
+    
+    justify-content: space-between; /* Равномерное распределение */
+    color:black;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    cursor: pointer;
+}
+
+
+select {
+  
+    border-radius: 8px;
+    padding: 10px;
+    background-color: white;
+    font-size: 24px;
+    font-family: 'Poiret One', sans-serif;
+    color: #082567;
+    outline: none;
+   
+    cursor: pointer;
+}
+
+
+
+
+input[type="date"] {
+    border-radius: 8px;
+    padding: 10px;
+    background-color: white;
+    font-size: 24px;
+    font-family: 'Poiret One', sans-serif;
+    color: #082567;
+    outline: none;
+    border:none;
+    cursor: pointer;
+    
+}
+
+button[type="submit"] {
+    padding: 10px;
+    border-radius: 8px;
+    border:none;
+    background-color: white;
+    font-size: 24px;
+    font-family: 'Poiret One', sans-serif;
+    color: #082567;
+    outline: none;
+   
+    cursor: pointer;
+
+}
+button[type="submit"]:hover {
+    background-color: #0066cc;
+    color: white;
+}
+
+button[type="submit"]:active {
+    background-color: #ffbdbd;
+    color: white;
+}
+
+
+.search-field:nth-child(4){
+width: 200px;
+margin-left:20px;
+
+}
+
+.count-basket {
+    color: white;  /* Цвет текста */
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали */
+    justify-content: center;  /* Центрируем кнопки */
+
+}
+
+
+/*ФУТЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕР*/
+
+.footer {
+    position: relative; /* Располагаем футер после основного контента */
+    bottom: 0;
+    width: 100%;
+    background-color: #001f3f;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    font-family: 'Poiret One', sans-serif;
+    font-size: 14px;
+    z-index: 1;
+    margin-top: auto; /* Важно: Это обеспечит, что футер будет всегда внизу */
+}
+
+
+.body-content {
+    min-height: 100vh; /* Минимальная высота равная высоте окна браузера */
+    padding-bottom: 60px; /* Добавляем отступ снизу, чтобы футер не перекрывал контент */
+    box-sizing: border-box; /* Учитываем паддинг в общей высоте */
+}
+
+
+/*КЛИЕНТЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ*/
+
+
+.styled-table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    
+    font-size: 18px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    
+   
+}
+
+.styled-table thead tr {
+    background-color: #003366;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 20px;
+   
+}
+
+.styled-table td{
+    background-color: rgb(236, 236, 236);
+    border-bottom: 5px solid #ddd;
+}
+
+.clients-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* при необходимости */
+}
+
+.clients-list a {
+    color:white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+/*О НАС ЛЮБИМЫХ!*/
+
+.about {
+    background-color: #f9f9f9;
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Poiret One', sans-serif;
+    line-height: 1.6;
+}
+
+.about h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #003366;
+    text-align: center;
+    margin-bottom: 20px;
+  
+}
+
+.about ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 20px 0;
+}
+
+.about ul li {
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.about ul li::before {
+    content: "✔";  /* Символ для маркера */
+    position: absolute;
+    left: 0;
+    color: #0066cc;
+}
+
+.about p {
+    font-size: 18px;
+    text-align: center;
+    color: #444;
+    margin-top: 20px;
+}
+
+.about p strong {
+    font-weight: bold;
+    color: #003366;
+}
+
+.about em {
+
+    color:white;
+
+} 
+
+
+/*РЕДАКТИКРОВАТЬ КЛИЕНТА*/
+
+/* Общие стили для формы */
+.client-form {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.client-form label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    display: block;
+}
+
+.client-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.client-form input[type="number"],
+.client-form input[type="email"],
+.client-form input[type="tel"] {
+    height: 40px;
+}
+
+.client-form input[type="submit"] {
+    background-color: #0066cc; /* Зеленая кнопка */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 6px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.client-form input[type="submit"]:hover {
+    background-color: #082567; /* Тёмный зеленый при наведении */
+}
+
+
+.client-form input[type="submit"]:active {
+    background-color: #ff9f9f; /* Тёмный зеленый при нажатии */
+}
+
+
+/*РЕДАКТИРОВАНИЕ КЛИЕНТА*/
+
+/* Общие стили для формы */
+.edit-client-form {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.edit-client-form label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    display: block;
+}
+
+.edit-client-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.edit-client-form input[type="number"],
+.edit-client-form input[type="email"],
+.edit-client-form input[type="tel"] {
+    height: 40px;
+}
+
+.edit-client-form input[type="submit"] {
+    background-color: #0066cc; /* Зеленая кнопка */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 6px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.edit-client-form input[type="submit"]:hover {
+    background-color: #082567; /* Тёмный зеленый при наведении */
+}
+
+
+.edit-client-form input[type="submit"]:active {
+    background-color: #ff9f9f; /* Тёмный зеленый при нажатии */
+}
+
+
+/*ИСТОРИЯ ПОКУПОК*/
+
+/* Стили для таблицы */
+.history-table {
+    width: 100%;
+    border-collapse: collapse; /* Убираем лишние отступы между ячейками */
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+/* Стили для заголовков таблицы */
+.history-table th {
+    padding: 12px;
+    background-color:  #003366; /* Зеленый цвет для заголовков */
+    color: white;
+    font-size: 16px;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Стили для строк таблицы */
+.history-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    font-size: 14px;
+   
+}
+
+/*ОФОРМЛЕНИЕ ЗАКАЗА*/
+/* Контейнер для всех элементов, который ограничивает ширину */
+.container {
+    width: 80%; /* Ограничение ширины, вы можете выбрать другой процент */
+    max-width: 1000px; /* Ограничение максимальной ширины, если нужно */
+    margin: 0 auto; /* Центрирует контейнер по горизонтали */
+    padding: 20px;
+}
+
+/* Стили для таблиц */
+table {
+    width: 100%; /* Таблица займет 100% ширины контейнера */
+    border-collapse: collapse; /* Убирает лишние пробелы между ячейками */
+    margin: 20px 0; /* Отступ сверху и снизу */
+    background-color: white;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd; /* Светлый бордер для ячеек */
+}
+
+th {
+    background-color: #003366; /* Цвет фона для заголовков */
+}
+
+
+
+/* Для форм */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+select, input[type="submit"]:nth-child(5) {
+    padding: 10px;
+    margin: 10px 0;
+    width: 80%; /* Ограничиваем ширину */
+    max-width: 300px; /* Максимальная ширина */
+    border-radius: 8px;
+    text-align: center;
+   
+}
+button[type="submit"]:nth-child(2) {
+    padding: 10px;
+    margin: 10px 0;
+    width: 80%; /* Ограничиваем ширину */
+    max-width: 300px; /* Максимальная ширина */
+    border-radius: 8px;
+   
+}
+
+
+
+.container label {
+
+    color:white;
+    text-align: center;
+}
+
+/*ДОБАВИТЬ РЕЙС*/
+
+/* Общие стили для формы */
+.add-route-form {
+    width: 400px;  /* Устанавливаем ширину формы */
+    margin: 50px auto;  /* Центрируем форму по горизонтали */
+    padding: 20px;  /* Отступы внутри формы */
+    background-color: #e9e9e9;  /* Светлый фон */
+    border-radius: 8px;  /* Скругленные углы */
+    
+    font-family: 'Arial', sans-serif;  /* Шрифт */
+}
+
+/* Стиль для всех инпутов и селектов */
+.input-field {
+   
+    padding: 10px;  /* Отступы внутри полей */
+    margin-bottom: 15px;  /* Отступ снизу */
+    border: none;  /* Убираем стандартную границу */
+    border-radius: 5px;  /* Скругленные углы */
+    font-size: 20px;  /* Размер шрифта */
+    width: 300px;  /* Кнопка на всю ширину */
+}
+
+/* Стили для меток */
+.add-route-form label {
+    font-size: 16px;  /* Размер шрифта */
+    margin-bottom: 5px;  /* Отступ снизу */
+    display: block;  /* Делает метки блочными элементами */
+}
+
+/* Стиль для кнопки отправки */
+.submit-button {
+    width: 100%;  /* Кнопка на всю ширину */
+    padding: 20px;  /* Отступы внутри кнопки */
+    background-color: #0066cc;  /* Цвет фона */
+    color: white;  /* Цвет текста */
+    border: none;  /* Убираем стандартную границу */
+    border-radius: 5px;  /* Скругленные углы */
+    font-size: 18px;  /* Размер шрифта */
+    cursor: pointer;  /* Курсор как указатель */
+    transition: background-color 0.3s ease;  /* Плавный переход при наведении */
+}
+
+/* Стили для кнопки при наведении */
+.submit-button:hover {
+    background-color: #082567;  /* Более темный оттенок при наведении */
+}
+
+
+.submit-button:active {
+    background-color: #ff9f9f; /* Тёмный зеленый при нажатии */
+}
+
+/*РЕДАКТИРОВАТЬ ДАННЫЕ РЕЙСА*/
+
+/* Общие стили для формы */
+.route-form {
+   
+    width: 30%;
+    margin: 0 auto;
+  
+    background-color: #e9e9e9;  /* Светлый фон */
+    border-radius: 8px;
+   
+}
+
+/* Стили для групп полей формы */
+.form-group {
+    margin-bottom: 15px;
+    
+}
+
+/* Стили для меток */
+label {
+    font-weight:bold;
+    font-size:18px;
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+}
+
+/* Стили для полей ввода */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border-radius: 5px;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+
+
+/* Убираем стандартное оформление disabled элементов */
+input[disabled], select[disabled] {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}

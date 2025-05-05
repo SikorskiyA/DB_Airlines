@@ -1,46 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 
 <head>
-    <title>Ввод данных рейса</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="/css/style.css">
+    <title> Добавить рейс </title>
 </head>
 
 <body>
-    <h1>Данные нового рейса</h1>
-    <form action="/routes/postAddRoute" method="POST">
-        <label for="STRcity-select">Откуда</label><br />
-        <select name="STRcity" id="STRcity-select">
-            <option value="0">Выберите город</option>
-            {{#each Cities}}
-            <option value="{{this.city}}">{{this.rusName}}</option>
-            {{/each}}
-        </select> <br />
+    <div class="body-content">
+        <div class="header-buttons">
+            <a href="/" class="header-button">Главная страница</a>
 
-        <label>Дата отбытия (YYYY-MM-DD hh:mm:ss)</label><br>
-        <input type="datetime" name="STRtime" /><br>
+        </div>
 
-        <label for="ARRcity-select">Куда</label><br />
-        <select name="ARRcity" id="ARRcity-select">
-            <option value="0">Выберите город</option>
-            {{#each Cities}}
-            <option value="{{this.city}}">{{this.rusName}}</option>
-            {{/each}}
-        </select> <br />
+        <div class="clients-list">
+            <a>Данные нового рейса </a>
+        </div>
 
-        <label>Дата прибытия (YYYY-MM-DD hh:mm:ss)</label><br>
-        <input type="datetime" name="ARRtime" /><br>
+        <form action="/routes/postAddRoute" method="POST" class="add-route-form">
+            <label for="STRcity-select"
+                style=" font-family: 'Poiret One';font-size:18px; font-weight:bold;">Откуда</label><br />
+            <select name="STRcity" id="STRcity-select" class="input-field">
+                <option value="0">Выберите город</option>
+                {{#each Cities}}
+                <option value="{{this.city}}">{{this.rusName}}</option>
+                {{/each}}
+            </select> <br />
 
-        <label>Цена</label><br>
-        <input name="price" type="number" /><br>
+            <label style=" font-family: 'Poiret One';font-size:18px; font-weight:bold;">Дата отбытия
+                (год-месяц-день)</label><br>
+            <input type="date" name="STRtime" class="input-field" /><br>
 
-        <label>Количество мест</label><br>
-        <input name="seats" type="number" /> <br>
+            <label for="ARRcity-select"
+                style=" font-family: 'Poiret One';font-size:18px; font-weight:bold;">Куда</label><br />
+            <select name="ARRcity" id="ARRcity-select" class="input-field">
+                <option value="0">Выберите город</option>
+                {{#each Cities}}
+                <option value="{{this.city}}">{{this.rusName}}</option>
+                {{/each}}
+            </select> <br />
+
+            <label style=" font-family: 'Poiret One'; font-size:18px; font-weight:bold;">Дата прибытия
+                (год-месяц-день)</label><br>
+            <input type="date" name="ARRtime" class="input-field" /><br>
+
+            <label style=" font-family: 'Poiret One';font-size:18px; font-weight:bold;">Цена</label><br>
+            <input name="price" type="number" class="input-field" /><br>
+
+            <label style=" font-family: 'Poiret One';font-size:18px; font-weight:bold;">Количество мест</label><br>
+            <input name="seats" type="number" class="input-field" /><br>
+
+            <input type="submit" value="Отправить" class="submit-button"
+                style=" font-family: 'Poiret One';font-size:18px; font-weight:bold;" />
+        </form>
 
 
-        <input type="submit" value="Отправить" />
-    </form>
 
-    <a href="/">Назад</a>
+    </div>
 </body>
+
+
+<footer class="footer" style="margin-bottom:-30px;">
+    <p>&copy; 2025 Авиасервис. Все права защищены. (кроме женских) </p>
+</footer>
+
 </html>
 
+/**/

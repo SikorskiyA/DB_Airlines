@@ -1,59 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 
 <head>
-    <title>Редактирование данных рейса</title>
-    <style>
-        .field {
-            width: 180px;
-        }
-    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="/css/style.css">
+    <title> Добавить рейс </title>
 </head>
 
 <body>
-    <h2>Редактирование данных рейса</h2>
-    <form action="/routes/postEditRoute" method="POST">
-        <input name="RouteId" value="{{routeId}}" hidden /><br />
 
-        <label>Откуда</label><br>
-        <input value="{{route.STRcity}}" disabled /><br>
-        <select name="STRcity" id="STRcity-select">
-            <option value="0">Выберите город</option>
-            {{#each Cities}}
-            <option value="{{this.city}}">{{this.rusName}}</option>
-            {{/each}}
-        </select> <br /><br>
+    <div class="body-content">
 
-        <label>Дата отбытия (YYYY-MM-DD hh:mm:ss)</label><br>
-        <input value="{{route.STRtime}}" disabled /><br>
-        <input name="STRtime" type="datetime" /><br><br>
+        <div class="header-buttons">
+            <a href="/" class="header-button">Главная страница</a>
+            <a href="/routes" class="header-button">Поиск рейсов</a>
 
-        <label>Куда</label><br>
-        <input value="{{route.ARRcity}}" disabled /><br>
-        <select name="ARRcity" id="ARRcity-select">
-            <option value="0">Выберите город</option>
-            {{#each Cities}}
-            <option value="{{this.city}}">{{this.rusName}}</option>
-            {{/each}}
-        </select> <br /><br>
+        </div>
 
-        <label>Дата прибытия (YYYY-MM-DD hh:mm:ss)</label><br>
-        <input value="{{route.ARRtime}}" disabled /><br>
-        <input name="ARRtime" type="datetime" /> <br><br>
+        <div class="clients-list" style=" margin-bottom:40px;">
+            <a>Редактирование данных рейса </a>
+        </div>
+        <form action="/routes/postEditRoute" method="POST" class="route-form">
+            <input name="RouteId" value="{{routeId}}" hidden /><br />
 
-        <label>Цена</label><br>
-        <input type="number" value="{{route.price}}" disabled /><br>
-        <input name="price" type="number" /> <br><br>
+            <div class="form-group">
+                <label for="STRcity-selectstyle=" font-family: 'Poiret One' ;font-size:18px;
+                    font-weight:bold;"">Откуда</label>
+                <input value="{{route.STRcity}}" disabled class="input-field" /><br />
+                <select name="STRcity" id="STRcity-select" class="input-field">
+                    <option value="0">Выберите город</option>
+                    {{#each Cities}}
+                    <option value="{{this.city}}">{{this.rusName}}</option>
+                    {{/each}}
+                </select>
+            </div><br />
 
-        <label>Количество мест</label><br>
-        <input type="number" value="{{route.seats}}" disabled /><br><br>
-        <input name="seats" type="number" /><br><br>
+            <div class="form-group">
+                <label for="STRtime" style=" font-family: 'Poiret One';font-size:18px; font-weight:bold;">Дата отбытия
+                    (год-месяц-день)</label>
+                <input value="{{route.STRtime}}" disabled class="input-field" /><br />
+                <input name="STRtime" type="date" class="input-field" />
+            </div><br />
 
-        <input type="submit" value="Отправить" />
-    </form>
+            <div class="form-group">
+                <label for="ARRcity-select"
+                    style=" font-family: 'Poiret One';font-size:18px; font-weight:bold;">Куда</label>
+                <input value="{{route.ARRcity}}" disabled class="input-field" /><br />
+                <select name="ARRcity" id="ARRcity-select" class="input-field">
+                    <option value="0">Выберите город</option>
+                    {{#each Cities}}
+                    <option value="{{this.city}}">{{this.rusName}}</option>
+                    {{/each}}
+                </select>
+            </div><br />
 
-        <a href="/routes">Поиск рейсов</a>
+            <div class="form-group">
+                <label for="ARRtime" style=" font-family: 'Poiret One';font-size:18px; font-weight:bold;">Дата прибытия
+                    (год-месяц-день)</label>
+                <input value="{{route.ARRtime}}" disabled class="input-field" /><br />
+                <input name="ARRtime" type="date" class="input-field" />
+            </div><br />
+
+            <div class="form-group">
+                <label for="price"
+                    style=" font-family: 'Poiret One';font-size:18px; font-weight:bold;">Цена</label><br />
+                <input type="number" value="{{route.price}}" disabled class="input-field" /><br />
+                <input name="price" type="number" class="input-field" />
+            </div><br />
+
+            <div class="form-group">
+                <label for="seats" style=" font-family: 'Poiret One';font-size:18px; font-weight:bold;">Количество
+                    мест</label><br />
+                <input type="number" value="{{route.seats}}" disabled class="input-field" /><br />
+                <input name="seats" type="number" class="input-field" />
+            </div><br />
+
+            <div class="form-group" style=" font-family: 'Poiret One';font-size:18px; font-weight:bold;">
+                <input type="submit" value="Отправить" class="submit-button" style="  width: 100%; width: 300px;" />
+            </div>
+        </form>
+
+
+
+
+    </div>
 </body>
+
+<footer class="footer">
+    <p>&copy; 2025 Авиасервис. Все права защищены. (кроме женских) </p>
+</footer>
+
 </html>
-
-
