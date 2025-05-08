@@ -3,13 +3,15 @@ const connectController = require("../controllers/connectController.js");
 const pool = connectController.pool;
 
 
-
 exports.getRoutes = function (req, res) {
-    pool.query("SELECT * FROM cities", function (err, cities) {
+    pool.query("SELECT * FROM countries", function (err, countries) {
         if (err) return console.log(err);
-        res.render("../Views/routes/Routes.hbs", {
-            cartLen: connectController.cart.length,
-            Cities: cities
+        pool.query("SELECT * FROM cities", function (err, cities) {
+            if (err) return console.log(err);
+            res.render("../Views/routes/Routes.hbs", {
+                cartLen: connectController.cart.length,
+                Countries: countries,
+            });
         });
     });
 };
@@ -62,8 +64,8 @@ exports.postAddRoute = function (req, res) {
         [STRcity, ARRcity, STRtime, ARRtime, seats, price], function (err, data) {
             if (err) return console.log(err);
             res.redirect("/routes");
-    });
- 
+        });
+
 };
 
 

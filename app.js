@@ -12,6 +12,8 @@ const clientRouter = require("./routes/clientRouter.js");
 
 const saleRouter = require("./routes/saleRouter.js");
 
+const apiRouter = require("./routes/api.js");
+
 app.use("/routes", urlencodedParser, routeRouter);
 app.use("/clients", urlencodedParser, clientRouter);
 
@@ -20,6 +22,8 @@ app.use("/sales", urlencodedParser, saleRouter);
 app.use("/", homeRouter);
 
 app.use(express.static(__dirname + '/public'));
+
+app.use("/api", urlencodedParser, apiRouter);
 
 
 app.use(function (req, res, next) {

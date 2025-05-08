@@ -1,71 +1,85 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
-    
-    
+
+
     <link rel="stylesheet" href="/css/style.css">
-    <title> Покупка авиабилетов  </title>
+    <title> Покупка авиабилетов </title>
 </head>
 
 <body>
     <div class="body-content">
-    <!-- Шапка с кнопками -->
-    <div class="header-buttons">
-        <a href="/" class="header-button">Главная страница</a>
-        <a href="/routes/addRoute" class="header-button">Создать рейс</a>
-        
-        <a href="/sales/getCart" class="header-button">Оформить заказ</a>
-        <a href="/clients" class="header-button">Список клиентов</a>
-    </div>
+        <!-- Шапка с кнопками -->
+        <div class="header-buttons">
+            <a href="/" class="header-button">Главная страница</a>
+            <a href="/routes/addRoute" class="header-button">Создать рейс</a>
 
-    <form action="/routes/search" method="POST">
-        <div class="search-container" style="background-image: url('/svg/airplane.jpg'); width:100%;">
-            
-            <div class="search-field">
-                
-                <select name="STRcity" id="STRcity-select" >
-                    <option value="0">Откуда</option>
-                    {{#each Cities}}
-                    <option value="{{this.city}}">{{this.rusName}}</option>
-                    {{/each}}
-                </select>
+            <a href="/sales/getCart" class="header-button">Оформить заказ</a>
+            <a href="/clients" class="header-button">Список клиентов</a>
+        </div>
+
+        <form action="/routes/search" method="POST">
+            <div class="search-container" style="background-image: url('/svg/airplane.jpg'); width:100%;">
+                <form action="/routes/search" method="POST" id="select-form">
+                    <span>Откуда</span>
+                    <div class="search-field">
+
+                        <select name="STRcountry" id="STRcountry-select">
+                            <option value="0">Страна</option>
+                            {{#each Countries}}
+                            <option value="{{this.country}}">{{this.rusName}}</option>
+                            {{/each}}
+                        </select>
+
+                        <select name="STRcity" id="STRcity-select">
+                            <option value="0">Город</option>
+                        </select>
+
+                    </div>
+
+                    <span>Куда</span>
+                    <div class="search-field">
+
+                        <select name="ARRcountry" id="ARRcountry-select">
+                            <option value="0">Страна</option>
+                            {{#each Countries}}
+                            <option value="{{this.country}}">{{this.rusName}}</option>
+                            {{/each}}
+                        </select>
+
+                        <select name="ARRcity" id="ARRcity-select">
+                            <option value="0">Город</option>
+                        </select>
+                    </div>
+                    <button type="submit" hidden="true"></button>
+                </form>
+
+                <div class="search-field">
+
+                    <input name="STRtime" id="STRtime" type="date" />
+                </div>
+
+                <div class="search-field">
+
+                    <button type="submit">Поиск</button>
+                </div>
+
+
+
             </div>
-
-            <div class="search-field">
-                
-                <select name="ARRcity" id="ARRcity-select">
-                    <option value="0">Куда</option>
-                    {{#each Cities}}
-                    <option value="{{this.city}}">{{this.rusName}}</option>
-                    {{/each}}
-                </select>
-            </div>
-
-            <div class="search-field">
-                
-                <input name="STRtime" id="STRtime" type="date" />
-            </div>
-
-            <div class="search-field">
-                
-                <button type="submit">Поиск</button>
-            </div>
+        </form>
 
 
+        <div class="count-basket" style="margin-top:10px;">
+            Количество товаров в Корзине: {{cartLen}}
 
         </div>
-    </form>
-
-   
-    <div class="count-basket" style="margin-top:10px;" >
-    Количество товаров в Корзине: {{cartLen}}
-    
     </div>
-</div>
 </body>
 
 <footer class="footer">
@@ -73,3 +87,61 @@
 </footer>
 
 </html>
+
+<script>    
+    document.getElementById('STRcountry-select').addEventListener('change', function () {
+    const country = this.value;
+    const STRcitySelect = document.getElementById('STRcity-select');
+
+    if (country === '0') {
+      STRcitySelect.innerHTML = '<option value="0">Город</option>';
+      return;
+    }
+
+    fetch(`/api/${encodeURIComponent(country)}`)
+      .then(response => response.json())
+      .then(cities => {
+        // Очистка старых опций
+        STRcitySelect.innerHTML = '<option value="0">Город</option>';
+        // Добавление новых опций
+        cities.forEach(city => {
+          const option = document.createElement('option');
+          option.value = city.city;
+          option.textContent = city.rusName;
+          STRcitySelect.appendChild(option);
+        });
+      })
+      .catch(error => {
+        console.error('Ошибка при загрузке городов:', error);
+        console.log(country);
+      });
+    });
+    
+    document.getElementById('ARRcountry-select').addEventListener('change', function () {
+    const country = this.value;
+    const ARRcitySelect = document.getElementById('ARRcity-select');
+
+    if (country === '0') {
+      ARRcitySelect.innerHTML = '<option value="0">Город</option>';
+      return;
+    }
+
+    fetch(`/api/${encodeURIComponent(country)}`)
+      .then(response => response.json())
+      .then(cities => {
+        // Очистка старых опций
+        ARRcitySelect.innerHTML = '<option value="0">Город</option>';
+        // Добавление новых опций
+        cities.forEach(city => {
+          const option = document.createElement('option');
+          option.value = city.city;
+          option.textContent = city.rusName;
+          ARRcitySelect.appendChild(option);
+        });
+      })
+      .catch(error => {
+        console.error('Ошибка при загрузке городов:', error);
+        console.log(country);
+      });
+    });
+</script>

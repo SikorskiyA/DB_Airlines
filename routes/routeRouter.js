@@ -18,8 +18,6 @@ routeRouter.use("/deleteRoute/:RouteId", routeController.deleteRoute);
 routeRouter.use("/buy/:RouteId", routeController.buy);
 
 
-
-
 routeRouter.use("/", routeController.getRoutes);
 
 module.exports = routeRouter;
