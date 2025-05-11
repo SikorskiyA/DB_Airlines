@@ -26,9 +26,9 @@
         <form action="/routes/search" method="POST">
             <div class="search-container" style="background-image: url('/svg/airplane.jpg'); width:100%;">
                 <form action="/routes/search" method="POST" id="select-form">
-                    <span>Откуда</span>
+                   
                     <div class="search-field">
-
+                        <div class="text_to_go">Откуда</div>
                         <select name="STRcountry" id="STRcountry-select">
                             <option value="0">Страна</option>
                             {{#each Countries}}
@@ -42,9 +42,9 @@
 
                     </div>
 
-                    <span>Куда</span>
+                    
                     <div class="search-field">
-
+                      <div class="text_to_go">Куда</div>
                         <select name="ARRcountry" id="ARRcountry-select">
                             <option value="0">Страна</option>
                             {{#each Countries}}
@@ -60,15 +60,12 @@
                 </form>
 
                 <div class="search-field">
-
+                    <div class="text_to_go" style = "margin-left: -5px;">Дата</div>
                     <input name="STRtime" id="STRtime" type="date" />
-                </div>
-
-                <div class="search-field">
-
                     <button type="submit">Поиск</button>
                 </div>
 
+              
 
 
             </div>
